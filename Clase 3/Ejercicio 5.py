@@ -1,4 +1,5 @@
 number = input ("Please enter a number")
+is_valid = True
 
 if number.isnumeric():
     number = int (number)
