@@ -1,5 +1,6 @@
-num1 = input ("Indique el primer número")
-num2 = input ("Indique el segundo número")
+num1 = input ("Please enter the first number: ")
+num2 = input ("Please enter the second number: ")
+is_valid = True
 
 if num1.isnumeric():
     num1 = float (num1)
@@ -13,11 +14,10 @@ else:
 
 
 if is_valid:
-    if (num2) == 0 :
+    if num2 == 0 :
         print ("Error")
     else:
-        resultado = num1 / num2
-        print (f"{resultado}")
+        print (num1/num2)
 
 else:
     print ("Invalid numbers")
