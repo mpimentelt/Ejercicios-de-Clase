@@ -1,4 +1,4 @@
-x = "Bienvenidos a la prepa de algoritmosa"
+x = "Bienvenidos a la prepa de algoritmos"
 count = 0
 for letter in x:
     if letter == "a" and len(x) > count+1:
