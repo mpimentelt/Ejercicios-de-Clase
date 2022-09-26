@@ -6,7 +6,6 @@ num2 = input ("Please enter the second number: ")
 while not num2.isnumeric():
     num2=input("Invalid number. Please enter the second number: ")
 
-
 else:
     num1 = float (num1)
     num2 = float (num2)
