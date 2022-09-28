@@ -5,4 +5,8 @@ else:
     number = int (number)
     for i in range(1,number+1): 
         if i%2 != 0:
-            print(i, end=",")
+            if i+2 >= number: 
+                print (i)
+            else:
+                print(i, end=",")
+        

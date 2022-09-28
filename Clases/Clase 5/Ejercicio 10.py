@@ -3,7 +3,8 @@ while not number.isnumeric():
     number = input("Error. Please enter a number: ")
 else:
     number = int(number)
-    for i in range(1,number+1,2): #arreglar el tema de la altura
+    number += number-1
+    for i in range(1,number+1,2):
         aux = i
         while aux >= 1:
             if aux == 1:
