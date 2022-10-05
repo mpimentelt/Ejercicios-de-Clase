@@ -1,6 +1,6 @@
 acum = 0
 while True: 
-    edad = input("Indique su edad: ")
+    edad = input("Indique la edad de la persona para la que comprará la entrada: ")
     while not edad.isnumeric():
         edad = input("Indique una edad válida: ")
     else:
