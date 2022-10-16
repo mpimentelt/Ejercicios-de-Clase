@@ -4,7 +4,10 @@ def print_welcome():
 def get_option(studies):
     for key,value in studies.items():
         for key_interno, value_interno in value.items():
-            print(f"{key}   -   {value_interno}", end="") #arreglar acá la letra que está de más
+            if key_interno == "description":
+                print(f"{key}   -   {value_interno}", end="") #arreglar acá la letra que está de más
+            else: 
+                print(f"   -   {value_interno}", end="")
         print("")
     return input("Please enter an option: ")
 
