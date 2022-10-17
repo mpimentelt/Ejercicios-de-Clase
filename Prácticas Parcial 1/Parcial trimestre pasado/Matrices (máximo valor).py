@@ -11,6 +11,6 @@ def main():
         [1,2,3]
     ]
     max_wealth = get_max_wealth (accounts)
-    print (max_wealth)
+    print ("The max wealth is ", max_wealth)
 
 main()
