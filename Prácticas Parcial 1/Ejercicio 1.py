@@ -19,7 +19,7 @@ while True:
             print(f"The number {number} is aspiring.")
         else:
             print(f"The number {number} is not aspiring.")
-        if input("Would you like to introduce another number? Y-yes or N-no").capitalize == "N":
+        if input("Would you like to introduce another number? Y-yes or N-no").capitalize() == "N":
             break
         else:
             continue

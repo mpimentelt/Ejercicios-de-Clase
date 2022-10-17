@@ -5,7 +5,7 @@ def get_option(studies):
     for key,value in studies.items():
         for key_interno, value_interno in value.items():
             if key_interno == "description":
-                print(f"{key}   -   {value_interno}", end="") #arreglar acá la letra que está de más
+                print(f"{key}   -   {value_interno}", end="")
             else: 
                 print(f"   -   {value_interno}", end="")
         print("")
@@ -82,20 +82,41 @@ def print_final_day(clients, clientsU, clientsT, clientsF, total_discounts, tota
     print("Total net amount for ultrasound: {}$".format(totalU))
     print("Total net amount for tomography: {}$".format(totalT))
     print("Total net amount for resonance: {}$".format(totalF))
-    print("Average of payments: {}$".format(total_amount/len(clients)))
+
+    if len(clients) == 0:
+        print("There were no clients today")
+    else:
+        print("Average of payments: {}$".format(total_amount/len(clients)))
+    
+    if len(clientsU) == 0:
+        print("There were no clients for ultrasound today")
+    else:
+        print("Average of payments for ultrasound: {}$".format(totalU/len(clientsU)))
+
+    if len(clientsT) == 0:
+        print("There were no clients for tomography today")
+    else:
+        print("Average of payments for tomography: {}$".format(totalT/len(clientsT)))
+        
+
+    if len(clientsF) == 0:
+        print("There were no clients for resonance today")
+    else:
+        print("Average of payments for resonance: {}$".format(totalF/len(clientsF)))
+        
 
 def main():
     studies_dict = {
         "U": {
-            "description": "ultrasonido",
+            "description": "ultrasound",
             "price": 8900
         },
         "T": {
-            "description": "tomografía",
+            "description": "tomography",
             "price": 12640
         },
         "F": {
-            "description": "resonancia",
+            "description": "resonance",
             "price": 15600
         }
     }
@@ -137,6 +158,5 @@ def main():
             break
     
     print_final_day(clients, clientsU, clientsT, clientsF, total_discount, total_net_amount, total_net_amountU, total_net_amountT, total_net_amountF)
-
 
 main()
