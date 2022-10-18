@@ -18,6 +18,5 @@ for x in range(1,number2):
         dividers2.append(x)
 if sum(dividers1) == number2 and sum(dividers2)==number1:
     print("Los números {} y {} son amigos.".format(number1,number2))
-    break
 else:
     print("Los números {} y {} no son amigos.".format(number1,number2))

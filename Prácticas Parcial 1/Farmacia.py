@@ -1,11 +1,11 @@
 def is_prime(rif):
-    number = int(rif(len(rif)-1))
+    number = int(rif[len(rif)-1])
     prime = True
     for x in range(2,number):
-        if number%x == 0:
+        if number%x == 0 or x<=1:
             prime = False
             break
-    if prime and x>1:
+    if prime:
         return True
     else: 
         return False
