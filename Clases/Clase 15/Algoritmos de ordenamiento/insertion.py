@@ -12,3 +12,4 @@ def main():
             j -= 1
     print(lista)
 main()
+
